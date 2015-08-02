@@ -3,7 +3,7 @@ import random
 import re
 import os
 import sys
-from phue import Bridge
+
 
 WORDS = ["RESTART", "REBOOT", "SHUT DOWN","SHUT UP"]
 
