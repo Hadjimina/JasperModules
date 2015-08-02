@@ -3,7 +3,7 @@ import random
 import os
 from time import sleep
 
-keylist = ['AIzaSyC3YucMwudWnj1tJbIkgcWiUBXGFLGAZRo','AIzaSyAc-iPHrBoZwi8o78lnx9A5SJmd5R-J0Zk','AIzaSyCVPjZM25JkJ6kQzBcf-HeTPwEdgF1zTWw','AIzaSyDUrwFGkihqp3m-1Eq21BYkHtmv6qm8Pj8','AIzaSyCT6kPt38CdE2fzMBfupWR7YnjSV5_yPg8','AIzaSyCG9CimHpUDYVwvs1xTmizFMeANa-RCFU0']
+keylist = [YOUR KEYS HERE]
 
 file = open('profile.yml','r')
 fileI = open('profile.yml','r')
