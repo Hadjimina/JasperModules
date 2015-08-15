@@ -1,6 +1,14 @@
 # JasperModules
 Collection of different Jasper Modules
 
+##Alarm Module
+Basically creates a cronjob at a certain time that executes jasperAlarm.py<br />
+If you want to play a music file after the alarm, you have to add the yourself at the end of the jasperAlarm.py file.<br />
+Usage = "Set an alarm for every monday at 8", or "Wake me up in 8 hours" (Only accepts full hours, no minutes)<br /><br />
+
+Requires pywapi. Install it like so :<br />
+```pip install pywapi```
+
 ##Hue Module
 Turns all hue lights on or off. Keep in mind that you need to a "bridgeip" to your profile.yml like so:<br />
 ```bridgeip: 192.168.XXX.XXX```<br /><br />
@@ -25,16 +33,29 @@ If you also use a server, add "downloadip" to your profile.yml like so :<br />
 
 Requires KAT library Install with :<br />
 
-```pip install kat```
+```pip install kat```<br />
 
+Usage: "Download a movie" BEEP "Iron man"
 ##Time Module
 The default time module somehow stopped working for me, so I wrote a new one.<br />
+Usage: "What time is it?", "What date is it?"
 
 ##Weather Module
-Tells you what the weather is like and can also give advice for your clothing according to the current weather.<br />
+Tells you what the weather is like and can also give advice for your clothing according to the current weather. Tells you if it's going to rain or not<br />
 Change ``` weather_com_result = pywapi.get_weather_from_weather_com('SZXX0728')``` according to your location. <br />
 Here is how:<br />
 Go to [weather.com](www.weather.com), search for your location. Your URL should change to something like this : ```http://www.weather.com/weather/today/l/SZXX0728:1:```. The caractes after ```l/``` until ```:``` is your location code.
 
 Requires pywapi. Install it like so :<br />
-```pip install pywapi```
+```pip install pywapi```<br />
+
+Usage: "What should i wear today?", "Whats the current temperature?","Is it going to rain today?"
+
+##Say Module
+Simply repeats what you have said.<br />
+Usage : "Say XXXXXXXXXXXXXXXXXX"
+
+##System Module
+Pings the ip addresses listed in the system.py file and tells you if they are online or not.<br />
+
+Usage : "Do a systems check"
