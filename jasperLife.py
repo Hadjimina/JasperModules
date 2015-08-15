@@ -3,7 +3,6 @@ import random
 import re
 import os
 import sys
-from phue import Bridge
 
 WORDS = ["RESTART", "REBOOT", "SHUT DOWN","SHUT UP"]
 
@@ -30,7 +29,7 @@ def handle(text, mic, profile):
 	    rebootfinal = random.choice(rebootMessages1)
 	    rebootfinal += random.choice(rebootMessages2)
 	    mic.say(rebootfinal)
-            rebootString= 'echo"'+root_pwd+'" | sudo -S -k reboot'
+            rebootString= 'echo "'+root_pwd+'" | sudo -S -k reboot'
             os.system(rebootString)
 
     

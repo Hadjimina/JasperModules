@@ -5,6 +5,7 @@ from datetime import datetime
 
 
 WORDS = ["TIME"]
+PRIORITY = 4
 
 def weekdayConverter(weekday_integer):
 
@@ -78,6 +79,6 @@ def isValid(text):
         Arguments:
         text -- user-input, typically transcribed speech
     """
-    return bool(re.search(r'\b((day|date|time))\b', text, re.IGNORECASE))
+    return bool(re.search(r'\b(date|time)\b', text, re.IGNORECASE))
 
 
