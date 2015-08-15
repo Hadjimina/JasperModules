@@ -3,6 +3,10 @@ import random
 import re
 import os
 import sys
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3608556b7ed4b3e31174188b252830627e4a0a07
 
 WORDS = ["RESTART", "REBOOT", "SHUT DOWN","SHUT UP"]
 
