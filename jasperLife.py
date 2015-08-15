@@ -4,7 +4,6 @@ import re
 import os
 import sys
 
-
 WORDS = ["RESTART", "REBOOT", "SHUT DOWN","SHUT UP"]
 
 

@@ -1,6 +1,8 @@
 # -*- coding: utf-8-*-
 import random
 import re
+import os
+
 from datetime import datetime, time
 from phue import Bridge
 
@@ -17,12 +19,14 @@ def handle(text, mic, profile):
     message = ""    
 
     if "on" in text.lower():
+        os.system("ssh pi@192.168.1.41 python /home/pi/james/sockets/lampON.py")
     	for l in lights:
 		l.on = True
 		l.brightness = 254
 
 	message = "All Lights have been turned on"
     elif "off" in text.lower():
+        os.system("ssh pi@192.168.1.41 python /home/pi/james/sockets/lampOFF.py")
 	for l in lights:
                 l.on = False
 
@@ -30,8 +34,9 @@ def handle(text, mic, profile):
 	
 	now = datetime.now()
 	now_time = now.time()
-	if now_time >= time(21,30) and now_time <= time(02,00):
-        	message += "Good Night"
+
+	if now_time > time(21,30) or now_time < time(02,00):
+        	message += " Good Night"
 
 
 

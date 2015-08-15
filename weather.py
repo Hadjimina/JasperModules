@@ -60,14 +60,11 @@ def rain(list):
     return string
 
 def handle(text, mic, profile):
-	
     
     weather_com_result = pywapi.get_weather_from_weather_com('SZXX0728')
     weather_status = weather_com_result['current_conditions']['text'] 
     weather_felttemp = weather_com_result['current_conditions']['feels_like']
     weather = "The weather conditions are "+weather_status+" with a felt temperature of "+ weather_felttemp+ " degrees Celsius. "
-    
-
 
     if ("clothes" in text.lower()) or ("wear" in text.lower()):
 
@@ -79,8 +76,12 @@ def handle(text, mic, profile):
         
         mic.say(weather_suggestion)
 
-    elif ("hot" in text.lower()) or ("temperature" in text.lower()) or ("cold" in text.loewr()):
+    elif ("hot" in text.lower()) or ("temperature" in text.lower()) or ("cold" in text.lower()):
 	mic.say("There's currently a felt temperature of "+weather_felttemp+" degrees Celsius.")	
+    elif "rain" in text.lower():
+	rainprop = rain(weather_com_result['forecasts'])
+	mic.say(rainprop)
+
     else :
     	mic.say(weather)
 
@@ -92,7 +93,7 @@ def isValid(text):
         Arguments:
         text -- user-input, typically transcribed speech
     """
-    return bool(re.search(r'\b((weather|wear|clothes|hot|cold|temperature))\b', text, re.IGNORECASE))
+    return bool(re.search(r'\b((rain|weather|wear|clothes|hot|cold|temperature))\b', text, re.IGNORECASE))
 
 
 
