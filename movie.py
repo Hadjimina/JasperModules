@@ -29,14 +29,15 @@ def handle(text, mic, profile):
         ip = profile['downloadip']
     else:
         ip = '127.0.0.1'
-
-    command = "ssh pi@"+ ip +" wget --trust-server-names "+query[0].download
+	
+    command = "ssh philipp@"+ ip + " cd /home/philipp/MediaHD/Torrents/torrents && wget --trust-server-names "+query[0].download
+    print(command)
     #subprocess.call(["ssh pi@"+ ip +" wget --trust-server-names "+query[0].download], shell=True)
 
     try:
         subprocess.check_call(command,shell=True)
     except subprocess.CalledProcessError:
-        finishedmessages2 = ["It seems that there was an Error Sir", "I ran into a Problem while downloading your torrent file"]
+        finishedmessages2 = ["It seems that there was an Error, Sir", "I ran into a Problem while downloading your torrent file"]
         finished = random.choice(finishedmessages2)
     
     mic.say(finished)

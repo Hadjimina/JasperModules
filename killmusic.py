@@ -16,11 +16,10 @@ def handle(text, mic, profile):
 	final = random.choice(messages1)
 	mic.say(final)
 	command = "ssh pi@"
-	ip = profile['downloadip']
+	ip = profile['piip']
 	command += ip
 	command += " pkill omxplayer"
 	os.system(command)
-	os.system("pkill ssh")
 	mic.say("The music process has successfully been killed")
 
 
