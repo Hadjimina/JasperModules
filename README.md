@@ -1,6 +1,8 @@
 # JasperModules
 Collection of different Jasper Modules
 
+Disclaimer : I think you probably have to tweak things a little. And of course there are always the small typos that make a script not work, so have a look at the code if things to work as expected.
+
 ##Alarm Module
 Basically creates a cronjob at a certain time that executes jasperAlarm.py<br />
 If you want to play a music file after the alarm, you have to add the yourself at the end of the jasperAlarm.py file.<br /><br />
