@@ -1,4 +1,4 @@
-# JasperModules
+# Jasper Modules
 Collection of different Jasper Modules
 
 Disclaimer : I think you probably have to tweak things a little. And of course there are always the small typos that make a script not work, so have a look at the code if things to work as expected.
@@ -12,7 +12,7 @@ Requires pywapi. Install it like so :<br />
 ```pip install pywapi```
 
 ##Hue Module
-Turns all hue lights on,off or dims them. Keep in mind that you need to a "bridgeip" to your profile.yml like so:<br />
+Turns all hue lights on,off or dims them. Keep in mind that you need to a "bridge" to your profile.yml like so:<br />
 ```bridgeip: 192.168.XXX.XXX```<br /><br />
 
 Requires phue library. Install with :<br />
@@ -29,7 +29,7 @@ ATTENTION: YOUR PASSWORD IS SAVED IN PLAIN TEXT
 
 
 ##Knowledged Module
-Extremely minor changes to the knowledged module from [nexhero](https://github.com/nexhero) all credit should go to him. [Visit his github page on the knowledged module for 
+Extremely minor changes to the knowledged module from [nexhero](https://github.com/nexhero) all credit should go to him. [Visit his github page on the knowledge module for 
 further instruction](https://github.com/nexhero/wolframalpha_jasper)<br /><br />
 Requires wolframalpha library. Install with :<br />
 ```pip install wolframalpha```
@@ -53,12 +53,12 @@ Tells you what the weather is like and can also give advice for your clothing ac
 Change ``` weather_com_result = pywapi.get_weather_from_weather_com('SZXX0728')``` according to your location. <br />
 Here is how:<br />
 Go to [weather.com](www.weather.com), search for your location. Your URL should change to something like this : ```http://www.weather.com/weather/today/l/SZXX0728:1:```. The 
-caractes after ```l/``` until ```:``` is your location code.
+characters after ```l/``` until ```:``` is your location code.
 
 Requires pywapi. Install it like so :<br />
 ```pip install pywapi```<br />
 
-Usage: "What should i wear today?", "Whats the current temperature?","Is it going to rain today?"
+Usage: "What should i wear today?", "What's the current temperature?","Is it going to rain today?"
 
 ##Say Module
 Simply repeats what you have said.<br />
@@ -70,7 +70,7 @@ Pings the ip addresses listed in the system.py file and tells you if they are on
 Usage : "Do a systems check"
 
 ##What's all that fridge.py and LampON/OFF.py ?
-Where I life the wemo switches are not available so I built my own. I am using intertechno IT-1500 switches which are just normal radio switches with a remote. I poped the remote 
+Where I life the wemo switches are not available so I built my own. I am using intertechno IT-1500 switches which are just normal radio switches with a remote. I popped the remote 
 open looked at the circuit and then hacked something together using a raspberry pi. Afterwards I  configured [nanpy](http://nanpy.github.io/). So these LampON/OFF.py are 
 simply making a nanpy call to the arduino which then uses a relay to control the remote for the switches. You probably do not need these so if you plan on using my modules I would 
-suggest deleting fride.py and any refrence to LampON/OFF. However if someone more intrested in how I configured my setup just email me I am always happy to help.
+suggest deleting fride.py and any refrence to LampON/OFF. However if someone more interested in how I configured my setup just email me I am always happy to help.
