@@ -74,4 +74,5 @@ Where I life the wemo switches are not available so I built my own. I am using i
 open looked at the circuit and then hacked something together using a raspberry pi. Afterwards I  configured [nanpy](http://nanpy.github.io/). So these LampON/OFF.py are 
 simply making a nanpy call to the arduino which then uses a relay to control the remote for the switches. You probably do not need these so if you plan on using my modules I would 
 suggest deleting fride.py and any refrence to LampON/OFF. However if someone more interested in how I configured my setup just email me I am always happy to help.
-Also if you find any errors in the code or something doesn't work anymore please do send me and e-mail.
+
+**Also if you find any errors in the code or something doesn't work anymore please do send me and e-mail.**
